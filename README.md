@@ -7,10 +7,10 @@ In this section we will present the differents steps for our set up.
 
 |   |  |
 | ------------- | ------------- |
-| On Amazon Sagemaker, i clicked on Getting Started, then clicked on Set up Sagemaker Domain  | ![This is an image](https://github.com/PedroToto/Inventory-Monitoring-at-Distribution-Center/blob/main/image/Set%20up%20Amazon%20SageMaker%20Studio%20domain1.png)  |
-| In the Set up Sagemaker Domain page, i typed a name for the Control Panel and select Create a new role  | ![This is an image](https://github.com/PedroToto/Inventory-Monitoring-at-Distribution-Center/blob/main/image/Set%20up%20Amazon%20SageMaker%20Studio%20domain2.png)  |
-| In the Create an IAM role pupop i selected Any S3 Bucket and clicked on Create role | ![This is an image](https://github.com/PedroToto/Inventory-Monitoring-at-Distribution-Center/blob/main/image/Set%20up%20Amazon%20SageMaker%20Studio%20domain3.png) |
-| Once the status is ready, we launch our Studio domain by clicking on Launch app and select Studio | ![This is an image](https://github.com/PedroToto/Inventory-Monitoring-at-Distribution-Center/blob/main/image/Set%20up%20Amazon%20SageMaker%20Studio%20domain4.png) |
+| On Amazon Sagemaker, clicked on Getting Started, then clicked on Set up Sagemaker Domain  | ![This is an image](https://github.com/PedroToto/Inventory-Monitoring-at-Distribution-Center/blob/main/image/Set%20up%20Amazon%20SageMaker%20Studio%20domain1.png)  |
+| In the Set up Sagemaker Domain page, typed a name for the Control Panel and select Create a new role  | ![This is an image](https://github.com/PedroToto/Inventory-Monitoring-at-Distribution-Center/blob/main/image/Set%20up%20Amazon%20SageMaker%20Studio%20domain2.png)  |
+| In the Create an IAM role pupop select Any S3 Bucket and clicked on Create role | ![This is an image](https://github.com/PedroToto/Inventory-Monitoring-at-Distribution-Center/blob/main/image/Set%20up%20Amazon%20SageMaker%20Studio%20domain3.png) |
+| Once the status is ready, launch the Studio domain by clicking on Launch app and select Studio | ![This is an image](https://github.com/PedroToto/Inventory-Monitoring-at-Distribution-Center/blob/main/image/Set%20up%20Amazon%20SageMaker%20Studio%20domain4.png) |
 
 # Dataset
 
