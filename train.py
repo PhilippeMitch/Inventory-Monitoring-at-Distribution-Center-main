@@ -1,4 +1,4 @@
-#TODO: Import your dependencies.
+#Import your dependencies.
 #For instance, below are some dependencies you might need if you are using Pytorch
 import numpy as np
 import torch
@@ -33,9 +33,9 @@ logger.addHandler(logging.StreamHandler(sys.stdout))
 
 def test(model, test_loader, criterion, hook):
     '''
-    TODO: Complete this function that can take a model and a 
-          testing data loader and will get the test accuray/loss of the model
-          Remember to include any debugging/profiling hooks that you might need
+        This function take a model and a 
+          testing data loader and get the test accuray/loss of the model
+          It also include debugging/profiling hooks that might be needed
     '''
     model.eval()
     hook.set_mode(smd.modes.EVAL)
@@ -59,9 +59,9 @@ def test(model, test_loader, criterion, hook):
 
 def train(model, train_loader, criterion, optimizer, hook, epochs):
     '''
-    TODO: Complete this function that can take a model and
-          data loaders for training and will get train the model
-          Remember to include any debugging/profiling hooks that you might need
+        This function take a model and
+          data loaders for training and get the train model
+          It also include debugging/profiling hooks that might be needed
     '''
     model.train()
     hook.set_mode(smd.modes.TRAIN)
@@ -97,8 +97,7 @@ def train(model, train_loader, criterion, optimizer, hook, epochs):
     
 def net():
     '''
-    TODO: Complete this function that initializes your model
-          Remember to use a pretrained model
+        This function initializes a pretrained model
     '''
     model = models.resnet101(pretrained=True)
 
@@ -116,8 +115,7 @@ def net():
 
 def create_data_loaders(data, batch_size):
     '''
-    This is an optional function that you may or may not need to implement
-    depending on whether you need to use data loaders or not
+    This function is use to create data loaders
     '''
     logger.info("Create the data loader")
     
@@ -146,7 +144,7 @@ def create_data_loaders(data, batch_size):
 
 def main(args):
     '''
-    TODO: Initialize a model by calling the net function
+        Initialize a model by calling the net function
     '''
     model=net()
     
@@ -160,7 +158,7 @@ def main(args):
     
     
     '''
-    TODO: Create your loss and optimizer
+        Create your loss and optimizer
     '''
     #loss_criterion = nn.NLLLoss()
     loss_criterion = nn.CrossEntropyLoss()
@@ -168,20 +166,19 @@ def main(args):
     #hook.register_loss(loss_criterion)
     
     '''
-    TODO: Call the train function to start training your model
-    Remember that you will need to set up a way to get training data from S3
+        Call the train function to start training the modelon the training data from S3
     '''
     logger.info(f"Hyperparameter values: Batch size {args.batch_size}: Number of epochs {args.epochs}, Learning rate {args.lr}")
     data =  create_data_loaders(args.data_dir, args.batch_size)
     model=train(model, data['train_loader'], loss_criterion, optimizer, hook,args.epochs)
     
     '''
-    TODO: Test the model to see its accuracy
+        Test the model to see its accuracy
     '''
     test(model, data['test_loader'], loss_criterion, hook)
     
     '''
-    TODO: Save the trained model
+        Save the trained model
     '''
     logger.info("Saving the model.")
     with open(os.path.join(args.model_dir, 'model.pth'), 'wb') as f:
@@ -190,7 +187,7 @@ def main(args):
 if __name__=='__main__':
     parser=argparse.ArgumentParser()
     '''
-    TODO: Specify all the hyperparameters you need to use to train your model.
+        Specify all the hyperparameters that is needed to use to train the model.
     '''
     
     parser.add_argument(
